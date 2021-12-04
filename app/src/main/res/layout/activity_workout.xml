@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dashboard_activity_layout"
+    tools:context=".DashBoardActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave_new_opp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="57dp"
+        android:elevation="-1dp"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="57dp"
+        android:background="@color/transparentColor"
+        android:divider="@color/transparentColor"
+        android:dividerHeight="20dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="8dp"
+        android:paddingRight="25dp"
+        android:scrollbarSize="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave_new"
+        android:layout_alignBottom="@id/bottom_navigation"
+        android:layout_marginBottom="57dp"
+        android:elevation="-1dp"
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/bottom_navigation_selection"
+        app:itemRippleColor="@color/non_selected_dot_primary"
+        app:itemTextColor="@color/bottom_navigation_selection"
+        app:menu="@menu/bottom_menu"
+        android:elevation="50dp"
+        />
+
+</RelativeLayout>

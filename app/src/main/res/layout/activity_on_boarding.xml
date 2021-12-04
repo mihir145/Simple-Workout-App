@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout_onboard"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewPagerCountDots" />
+
+    <LinearLayout
+        android:id="@+id/viewPagerCountDots"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@+id/ll_footer"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_get_started"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/on_board_btn"
+            android:background="@color/on_board_btn"
+            android:text="Get Started"
+            android:fontFamily="@font/zenkurenaido"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/onboarding_wave"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:elevation="-1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_wave_new" />
+
+
+
+</RelativeLayout>

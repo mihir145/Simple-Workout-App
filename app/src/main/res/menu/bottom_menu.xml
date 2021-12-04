@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:enabled="true"
+        android:visible="true"
+        android:iconTint="@color/non_selected_dot_primary"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="Dashboard"
+        />
+    <item
+        android:id="@+id/workouts"
+        android:enabled="true"
+        android:visible="true"
+        android:iconTint="@color/non_selected_dot_primary"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="Workouts"
+        />
+</menu>
