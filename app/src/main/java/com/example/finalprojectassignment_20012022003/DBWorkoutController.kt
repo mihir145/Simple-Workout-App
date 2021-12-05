@@ -132,25 +132,4 @@ class DBWorkoutController(context : Context) {
         database.close()
         return total
     }
-
-    fun getWorkout(workoutId: String):Workout{
-        database = dbHelper.readableDatabase
-
-        val query = "SELECT * FROM ${DBHelper.WORKOUT_TABLE} WHERE ${DBHelper.COLUMN_WORKOUT_ID}=${workoutId};"
-        val cursor = database.rawQuery(query,null)
-        cursor.moveToFirst()
-
-        val workout = Workout(
-            cursor.getString(1),
-            cursor.getString(2),
-            getMusicRawId(cursor.getInt(3)),
-            false,
-            cursor.getInt(4),
-            cursor.getInt(5)
-        )
-        workout.id = cursor.getString(0)
-        database.close()
-        return workout
-    }
-
 }

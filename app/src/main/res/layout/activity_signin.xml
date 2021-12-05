@@ -16,36 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/login_illustration"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:elevation="10dp"-->
-<!--        android:outlineSpotShadowColor="@color/white"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:layout_marginTop="-60dp"-->
-<!--        android:src="@drawable/login_illustration"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/signin_upper_wave"-->
-<!--        app:layout_constraintVertical_bias="0" />-->
-
-<!--    <View-->
-<!--        android:id="@+id/signin_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="500dp"-->
-<!--        android:background="@drawable/ic_sigin_back"-->
-<!--        android:elevation="-1dp"-->
-<!--        android:visibility="invisible"-->
-<!--        app:layout_constraintVertical_bias="0.0"-->
-<!--        android:layout_marginTop="-40dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/login_illustration" />-->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

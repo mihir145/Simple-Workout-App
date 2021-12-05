@@ -49,7 +49,6 @@ class SingleWorkoutActivity : AppCompatActivity() {
 
     val dbActivityController = DBActivityController(this)
 
-    private var notifyTime : Long = 0
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -151,7 +150,6 @@ class SingleWorkoutActivity : AppCompatActivity() {
 
         workoutTitle.text = WorkoutActivity.arrayList[position].name
         startTimer(timerTextView,WorkoutActivity.arrayList[position].minute*60)
-        notifyTime = System.currentTimeMillis() + 60
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -272,20 +270,5 @@ class SingleWorkoutActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         startStopService(position,"stop")
-    }
-
-    private fun createNotificationChannel() {
-        val notificationManager =
-            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val description = "Channel for sending notes notification"
-            val importance = NotificationManager.IMPORTANCE_HIGH
-            val channel = NotificationChannel(channelId, channelName, importance)
-            channel.description = description
-            channel.vibrationPattern = longArrayOf(0, 1000, 500, 1000)
-            channel.enableVibration(true)
-            notificationManager.createNotificationChannel(channel)
-        }
     }
 }

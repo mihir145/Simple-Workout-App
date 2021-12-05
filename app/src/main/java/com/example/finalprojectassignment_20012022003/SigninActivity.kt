@@ -29,7 +29,6 @@ class SigninActivity : AppCompatActivity() {
     private lateinit var signinEmailTextFieldAnimation : Animation
     private lateinit var signinPasswordTextFieldAnimation : Animation
     private lateinit var signinButtonAnimation : Animation
-    private lateinit var signinViewAnimation : Animation
     private lateinit var signinNotAccountTextView : TextView
     private lateinit var signinBtn : AppCompatButton
 
@@ -59,7 +58,6 @@ class SigninActivity : AppCompatActivity() {
         signinEmailTextFieldAnimation = AnimationUtils.loadAnimation(this,R.anim.welcome_btn_left_translate)
         signinPasswordTextFieldAnimation = AnimationUtils.loadAnimation(this,R.anim.welcome_btn_right_translate)
         signinButtonAnimation = AnimationUtils.loadAnimation(this,R.anim.signin_btn_scale)
-        signinViewAnimation = AnimationUtils.loadAnimation(this,R.anim.signin_view_animation)
 
         signinEmail.startAnimation(signinEmailTextFieldAnimation)
         signinPassword.startAnimation(signinPasswordTextFieldAnimation)

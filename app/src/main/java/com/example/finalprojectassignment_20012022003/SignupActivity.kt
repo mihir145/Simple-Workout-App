@@ -35,7 +35,6 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var signupEmailTextFieldAnimation : Animation
     private lateinit var signupPasswordTextFieldAnimation : Animation
     private lateinit var signupButtonAnimation : Animation
-    private lateinit var signupViewAnimation : Animation
 
     private lateinit var signupAlreadyAccountTextView :TextView
     private lateinit var signupBtn : AppCompatButton
@@ -75,8 +74,6 @@ class SignupActivity : AppCompatActivity() {
         signupEmailTextFieldAnimation = AnimationUtils.loadAnimation(this,R.anim.welcome_btn_left_translate)
         signupPasswordTextFieldAnimation = AnimationUtils.loadAnimation(this,R.anim.welcome_btn_right_translate)
         signupButtonAnimation = AnimationUtils.loadAnimation(this,R.anim.signin_btn_scale)
-        signupViewAnimation = AnimationUtils.loadAnimation(this,R.anim.signin_view_animation)
-
 
         signupEmailBox.startAnimation(signupEmailTextFieldAnimation)
         signupPasswordBox.startAnimation(signupPasswordTextFieldAnimation)

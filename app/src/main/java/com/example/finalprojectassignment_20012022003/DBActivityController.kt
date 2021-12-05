@@ -33,27 +33,4 @@ class DBActivityController(context: Context) {
         database.insert(DBHelper.ACTIVITY_TABLE, null, values)
         database.close()
     }
-
-    fun getActivities(id:Int) : HashMap<String,ArrayList<String>>{
-        val db = dbHelper.writableDatabase
-        val hashMap = HashMap<String,ArrayList<String>>()
-
-        // Select All Query
-        val selectQuery = "SELECT ${DBHelper.COL_WORKOUT_ID},${DBHelper.COL_ACTIVITY_DATE} FROM " + DBHelper.ACTIVITY_TABLE + " ?=?"
-
-        val cursor = db.rawQuery(selectQuery, arrayOf(DBHelper.COL_USER_ACTIVITY_ID,id.toString()))
-
-        // looping through all rows and adding to list
-        if (cursor.moveToFirst()) {
-            do {
-                if(!hashMap.containsKey(cursor.getString(1))){
-                    hashMap[cursor.getString(1)] = ArrayList()
-                }
-
-                hashMap[cursor.getString(1)]?.add(cursor.getString(0))
-
-            } while (cursor.moveToNext())
-        }
-        return hashMap
-    }
 }

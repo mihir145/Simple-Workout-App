@@ -1,12 +1,8 @@
 package com.example.finalprojectassignment_20012022003
 
-import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 
 class DBHelper(context: Context) : SQLiteOpenHelper(context,DB_NAME,null,DB_VERSION) {
     val pContext = context
